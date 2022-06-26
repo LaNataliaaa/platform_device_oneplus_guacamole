@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2009 The Android Open Source Project
+<!--
+     Copyright (C) 2020 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,13 +14,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources>
-    <!-- Fingerprint -->
-    <dimen name="fingerprint_dot_radius">8dp</dimen>
-    <item name="fingerprint_sensor_location_fraction_y" type="fraction">80%</item>
-
-    <!-- Whether to show Smooth Display feature in Settings Options -->
-    <bool name="config_show_smooth_display">true</bool>
-
+    <!-- The bottom margin of the keyguard security container -->
+    <dimen name="kg_security_container_min_bottom_margin">625px</dimen>
 </resources>
