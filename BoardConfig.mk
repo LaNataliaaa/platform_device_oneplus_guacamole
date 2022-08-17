@@ -54,6 +54,41 @@ TARGET_NO_BOOTLOADER := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 TARGET_USE_QTI_BT_STACK := true
 
+# Kernel
+BOARD_BOOT_HEADER_VERSION := 2
+BOARD_KERNEL_BASE := 0x00000000
+
+BOARD_KERNEL_CMDLINE := \
+    androidboot.hardware=qcom \
+    androidboot.console=ttyMSM0 \
+    androidboot.memcg=1 \
+    lpm_levels.sleep_disabled=1 \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    msm_rtb.filter=0x237 \
+    service_locator.enable=1 \
+    swiotlb=2048 \
+    loop.max_part=7 \
+    androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.vbmeta.avb_version=1.0
+
+BOARD_KERNEL_IMAGE_NAME := Image-dtb
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+
+TARGET_KERNEL_CONFIG := vendor/guacamole_defconfig
+TARGET_KERNEL_SOURCE := kernel/oneplus/guacamole
+
+# Platform
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := msmnile
+
+# Properties
+TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/properties/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
+
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
@@ -80,9 +115,9 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oneplus:libudfps_extension.oneplus
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # HIDL
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest-qva.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
+ODM_MANIFEST_FILES := $(DEVICE_PATH)/configs/vintf/manifest-qva.xml
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
@@ -121,6 +156,7 @@ include device/oneplus/guacamole-kernel/BoardConfigPrebuilt.mk
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/properties/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 
