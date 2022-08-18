@@ -272,10 +272,8 @@ PRODUCT_PACKAGES += \
     init.oem_ftm.rc \
     init.oem.debug.rc \
     init.oem.rc \
-    init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
-    init.qti.ufs.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     vendor.oem_ftm.rc \
