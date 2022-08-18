@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Set Shipping API level
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
-
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -408,6 +405,9 @@ PRODUCT_PACKAGES += \
 # Servicetracker
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.0.vendor
+
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 28
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
