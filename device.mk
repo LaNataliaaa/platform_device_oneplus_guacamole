@@ -130,8 +130,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl:64 \
     android.hardware.boot@1.0-service \
     android.hardware.boot@1.0-impl.recovery \
-    bootctrl.msmnile \
-    bootctrl.msmnile.recovery
+    bootctrl.oneplus \
+    bootctrl.oneplus.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
