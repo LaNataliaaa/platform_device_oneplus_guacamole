@@ -1,13 +1,13 @@
 [
   {
-    "remote": "github",
-    "repository": "aScordino/platform_hardware_oneplus",
+    "remote": "tequila",
+    "repository": "platform_hardware_oneplus",
     "target_path": "hardware/oneplus"
     "branch": "tobacco"
   },
   {
-    "remote": "github"
-    "repository": "aScordino/android_device_oneplus_guacamole-kernel",
+    "remote": "tequila"
+    "repository": "platform_device_oneplus_guacamole-kernel",
     "target_path": "device/oneplus/guacamole-kernel"
     "branch": "tobacco"
   }
