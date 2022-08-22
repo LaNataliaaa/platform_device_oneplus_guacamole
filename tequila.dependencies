@@ -6,7 +6,9 @@
     "branch": "tobacco"
   },
   {
-    "repository": "android_kernel_oneplus_guacamole",
-    "target_path": "kernel/oneplus/guacamole"
+    "remote": "github"
+    "repository": "aScordino/android_device_oneplus_guacamole-kernel",
+    "target_path": "device/oneplus/guacamole-kernel"
+    "branch": "tobacco"
   }
 ]
