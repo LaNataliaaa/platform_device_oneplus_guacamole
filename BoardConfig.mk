@@ -119,6 +119,10 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 ODM_MANIFEST_FILES := $(DEVICE_PATH)/configs/vintf/manifest-qva.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_oneplus_guacamole
+TARGET_RECOVERY_DEVICE_MODULES := init_oneplus_guacamole
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
