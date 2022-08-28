@@ -386,6 +386,10 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+# Screen density
+PRODUCT_AAPT_CONFIG := xxxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
+
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
