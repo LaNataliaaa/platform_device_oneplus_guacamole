@@ -355,9 +355,17 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
+PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    DialerResCommon \
+    DozeResCommon \
+    FrameworksResCommon \
+    SettingsProviderResCommon \
+    SettingsResCommon \
+    SystemUIResCommon \
+    TelephonyResCommon \
+    WifiResCommon
+  
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Power
@@ -480,10 +488,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
-
-# WiFi
-PRODUCT_PACKAGES += \
-    WifiResCommon
 
 # WiFi Display
 PRODUCT_PACKAGES += \
