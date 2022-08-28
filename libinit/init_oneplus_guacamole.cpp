@@ -76,6 +76,11 @@ void load_dalvikvm_properties() {
   property_override("dalvik.vm.heapminfree", "8m");
 }
 
+void load_common_properties() {
+  property_override("ro.product.name", "OnePlus7Pro");
+  property_override("ro.product.device", "OnePlus7Pro");
+}
+
 void vendor_load_properties() {
   int prj_version = stoi(android::base::GetProperty("ro.boot.prj_version", ""));
   int project_name = stoi(android::base::GetProperty("ro.boot.project_name", ""));
@@ -109,4 +114,7 @@ void vendor_load_properties() {
 
   // dalvikvm props
   load_dalvikvm_properties();
+
+  // common props
+  load_common_properties();
 }
