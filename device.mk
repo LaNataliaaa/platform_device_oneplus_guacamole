@@ -427,8 +427,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    als_correction_service.oneplus_msmnile \
-    android.hardware.sensors@2.0-service.oneplus_msmnile \
+    als_correction_service.oneplus_guacamole \
+    android.hardware.sensors@2.0-service.oneplus_guacamole \
     libsensorndkbridge
 
 # Servicetracker
