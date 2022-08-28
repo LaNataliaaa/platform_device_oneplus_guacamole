@@ -111,7 +111,7 @@ void vendor_load_properties() {
       /* OnePlus 7 Pro T-Mobile */
       property_override("ro.product.model", "GM1915");
       break;
-
+  }
   // dalvikvm props
   load_dalvikvm_properties();
 
